@@ -34,19 +34,9 @@ public class ChatClientCLI {
 
 						if (message.equalsIgnoreCase("exit")) {
 							System.out.println("Closing connection.");
-							try {
 								client.closeConnection();
-							} catch (IOException e) {
-								// TODO Auto-generated catch block
-								e.printStackTrace();
-							}
 						} else {
-							try {
-								client.sendToServer(message);
-							} catch (IOException e) {
-								// TODO Auto-generated catch block
-								e.printStackTrace();
-							}
+							client.sendToServer(message);
 						}
 					} catch (IOException e1) {
 						// TODO Auto-generated catch block
