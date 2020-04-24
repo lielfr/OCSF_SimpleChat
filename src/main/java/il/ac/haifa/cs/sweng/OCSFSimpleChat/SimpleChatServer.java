@@ -17,6 +17,24 @@ public class SimpleChatServer extends AbstractServer {
 		sendToAllClients(msg);
 	}
 	
+	
+	
+	@Override
+	protected synchronized void clientDisconnected(ConnectionToClient client) {
+		// TODO Auto-generated method stub
+		
+		System.out.println("Client Disconnected.");
+		super.clientDisconnected(client);
+	}
+	
+	
+
+	@Override
+	protected void clientConnected(ConnectionToClient client) {
+		super.clientConnected(client);
+		System.out.println("Client connected: " + client.getInetAddress());
+	}
+
 	public static void main(String[] args) throws IOException {
 		if (args.length != 1) {
 			System.out.println("Required argument: <port>");
