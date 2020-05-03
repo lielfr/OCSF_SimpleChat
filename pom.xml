@@ -89,7 +89,7 @@
         				<goal>java</goal>
         			</goals>
         			<configuration>
-        				<mainClass>il.ac.haifa.cs.sweng.OCSFSimpleChat.ChatClientCLI</mainClass>
+        				<mainClass>il.ac.haifa.cs.sweng.OCSFSimpleChat.SimpleChatClient</mainClass>
         			</configuration>
         		</execution>
         	</executions>

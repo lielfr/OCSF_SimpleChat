@@ -39,4 +39,16 @@ public class SimpleChatClient extends AbstractClient {
 		super.connectionClosed();
 		chatClientCLI.closeConnection();
 	}
+	
+	public static void main(String[] args) throws IOException {
+		if (args.length != 2) {
+			System.out.println("Required arguments: <host> <port>");
+		} else {
+			String host = args[0];
+			int port = Integer.parseInt(args[1]);
+
+			SimpleChatClient chatClient = new SimpleChatClient(host, port);
+			chatClient.openConnection();
+		}
+	}
 }
